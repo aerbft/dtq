@@ -1,0 +1,16 @@
+
+#ex 11 work
+
+
+#ex 11 base
+import csv
+
+f = open("nfl.csv", 'r')
+nfl = list(csv.reader(f))
+
+def nfl_wins(team):
+    count = 0
+    for row in nfl:
+        if row[2] == team:
+            count = count + 1
+    return count
